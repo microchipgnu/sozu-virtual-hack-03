@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button"
-import { CodeFile } from "@/lib/filesystem"
+import type { CodeFile } from "@/lib/filesystem"
 
 interface FileGridProps {
   files: CodeFile[]
@@ -14,13 +14,17 @@ export function FileGrid({ files, onFileSelect }: FileGridProps) {
           key={index}
           variant="outline"
           onClick={() => onFileSelect(file)}
-          className="w-full h-full p-6 text-left border border-purple-500/30 bg-black/40 backdrop-blur-sm rounded-xl 
+          className="w-full h-full p-6 text-left border border-zinc-800 bg-gradient-to-br from-gray-900 via-zinc-900 to-black rounded-xl
             transition-all duration-300 ease-in-out overflow-hidden
-            hover:scale-105 hover:bg-purple-900/20 hover:border-purple-400/50 hover:shadow-lg hover:shadow-purple-500/20"
+            hover:scale-105 hover:border-gray-700 hover:shadow-lg hover:shadow-gray-800/20"
         >
           <div className="w-full">
-            <h2 className="text-xl font-semibold text-white group-hover:text-purple-200 transition-colors truncate">{file.path}</h2>
-            <p className="text-gray-400 mt-2 group-hover:text-purple-300 transition-colors truncate">Click to edit and run code</p>
+            <h2 className="text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-gray-400 to-zinc-400 truncate">
+              {file.path}
+            </h2>
+            <p className="text-gray-300 mt-2 transition-colors truncate">
+              Click to edit and run code
+            </p>
           </div>
         </Button>
       ))}

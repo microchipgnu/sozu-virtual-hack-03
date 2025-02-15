@@ -20,7 +20,7 @@ if (!projectId) {
 const metadata = {
   name: 'Mantle AIM',
   description: 'AppKit Example',
-  url: 'https://reown.com/appkit', // origin must match your domain & subdomain
+  url: process.env.NEXT_PUBLIC_APP_URL as string, // origin must match your domain & subdomain
   icons: ['https://assets.reown.com/reown-profile-pic.png']
 }
 

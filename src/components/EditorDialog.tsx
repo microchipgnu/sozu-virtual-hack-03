@@ -114,8 +114,8 @@ export function EditorDialog({
     return (
         <>
             <Dialog open={file !== null} onOpenChange={(open) => !open && onClose()}>
-                <DialogContent className={`max-w-4xl bg-gray-900/95 ${isRunning ? 'shadow-lg' : 'border-purple-500/30'}`}>
-                    <DialogTitle className="text-white mb-4">
+                <DialogContent className="max-w-4xl bg-gradient-to-br from-gray-900 via-zinc-900 to-black">
+                    <DialogTitle className="text-transparent bg-clip-text bg-gradient-to-r from-gray-400 to-zinc-400 mb-4">
                         {file.path}
                     </DialogTitle>
 
@@ -315,7 +315,7 @@ export function EditorDialog({
                             <Button
                                 onClick={handleRunClick}
                                 disabled={isRunning}
-                                className={`bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 ${isRunning ? 'animate-pulse' : ''}`}
+                                className={`bg-gradient-to-r from-gray-400 to-zinc-400 text-black font-semibold hover:from-gray-500 hover:to-zinc-500 ${isRunning ? 'animate-pulse' : ''}`}
                             >
                                 {isRunning ? (
                                     <>
@@ -331,7 +331,7 @@ export function EditorDialog({
                         ) : (
                             <Button
                                 onClick={onBack}
-                                className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600"
+                                className="bg-gradient-to-r from-gray-400 to-zinc-400 text-black font-semibold hover:from-gray-500 hover:to-zinc-500"
                             >
                                 Back to Code
                             </Button>
@@ -342,8 +342,8 @@ export function EditorDialog({
 
             {/* Input Dialog */}
             <Dialog open={showInputDialog} onOpenChange={setShowInputDialog}>
-                <DialogContent className="bg-gray-900/95">
-                    <DialogTitle className="text-white">Enter Input Values</DialogTitle>
+                <DialogContent className="bg-gradient-to-br from-gray-900 via-zinc-900 to-black">
+                    <DialogTitle className="text-transparent bg-clip-text bg-gradient-to-r from-gray-400 to-zinc-400">Enter Input Values</DialogTitle>
                     <div className="space-y-4">
                         {frontmatterInputs?.map((field: {
                             type: string;
@@ -375,7 +375,10 @@ export function EditorDialog({
                             <Button onClick={() => setShowInputDialog(false)} variant="outline">
                                 Cancel
                             </Button>
-                            <Button onClick={handleInputSubmit}>
+                            <Button 
+                                onClick={handleInputSubmit}
+                                className="bg-gradient-to-r from-gray-400 to-zinc-400 text-black font-semibold hover:from-gray-500 hover:to-zinc-500"
+                            >
                                 Run
                             </Button>
                         </div>
