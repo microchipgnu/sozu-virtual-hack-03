@@ -10,7 +10,7 @@ This project uses [AIM](https://aim.microchipgnu.pt) to run Markdown-based workf
 2. Integrates with GOAT SDK to enable AI Agents to interact with the blockchain.
   2.1 
 3. Integrates with ZeroEx API to enable AI Agents to interact with the blockchain.
-4. Integrates with E2B Code Interpreter to enable AI Agents to interact with the blockchain.
+4. Integrates with E2B Code Interpreter to enable workflows to run Python, Bash and Javascript code.
 
 ## What was not implemented
 
