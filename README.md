@@ -1,4 +1,4 @@
-# AIMantle
+![AIM 640x360](https://github.com/user-attachments/assets/039a7277-91f2-41c0-abef-dd3089cc6609)
 
 AIMantle is a powerful web-based development environment for building, testing, and deploying Mantle agentic workflows. 
 
